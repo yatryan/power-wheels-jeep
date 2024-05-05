@@ -1,4 +1,4 @@
-# Complete project details at https://RandomNerdTutorials.com
+# Wonder Woman Jeep
 
 from machine import Pin
 import machine, neopixel, time
@@ -6,7 +6,7 @@ from ota import OTAUpdater
 from WIFI_CONFIG import SSID, PASSWORD
 
 # OTA Update Link
-firmware_url = "https://raw.githubusercontent.com/yatryan/power-wheels-jeep/master"
+firmware_url = "https://raw.githubusercontent.com/yatryan/power-wheels-jeep/master/"
 
 # Perform OTA
 ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
@@ -26,26 +26,6 @@ p = 5
 np = neopixel.NeoPixel(machine.Pin(p), n)
 
 # FUNCTIONS FOR LIGHTING EFFECTS
-# bounce
-def bounce(r, g, b, wait):
-  for i in range(2 * n):
-    for j in range(n):
-      np[j] = (r, g, b)
-    if (i // n) % 2 == 0:
-      np[i % n] = (0, 0, 0)
-    else:
-      np[n - 1 - (i % n)] = (0, 0, 0)
-    np.write()
-    time.sleep_ms(wait)
-
-# cycle
-def cycle(r, g, b, wait):
-  for i in range(n):
-    for j in range(n):
-      np[j] = (0, 0, 0)
-    np[i % n] = (r, g, b)
-    np.write()
-    time.sleep_ms(wait)
 
 # function to go through all colors 
 def wheel(pos):

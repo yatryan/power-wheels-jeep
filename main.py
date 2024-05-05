@@ -6,7 +6,7 @@ from ota import OTAUpdater
 from WIFI_CONFIG import SSID, PASSWORD
 
 # OTA Update Link
-firmware_url = "https://raw.githubusercontent.com/<username>/<repo_name>/<branch_name>"
+firmware_url = "https://raw.githubusercontent.com/yatryan/power-wheels-jeep/master"
 
 # Perform OTA
 ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")

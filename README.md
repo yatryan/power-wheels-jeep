@@ -35,5 +35,6 @@ Clone the repository and flash the firmware to your Raspberry Pi Pico:
 ```bash
 git clone https://github.com/yatryan/power-wheels-jeep.git
 cp -r power-wheels-jeep/* /Volumes/CIRCUITPY/
+```
 
 > Created by ChatGPT

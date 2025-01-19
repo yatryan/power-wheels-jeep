@@ -18,23 +18,4 @@ This project uses **Raspberry Pi Pico microcontrollers** to handle communication
   - MicroPython for Raspberry Pi Pico.
   - Custom OTA update mechanism using a server or cloud service.
 
-## Setup
-
-### 1. Hardware Assembly
-- **Motor Control**: Connect the motor drivers to the Power Wheels motors according to the motor driver's documentation. The Raspberry Pi Pico will not control the motors directly but will send commands (e.g., PWM, serial commands) to the motor driver.
-- **Sensors**: Connect various sensors to the Raspberry Pi Pico GPIO pins to read data such as battery voltage, temperature, and speed.
-- **Wireless Module**: Connect an ESP8266/ESP32 or similar wireless module to the Raspberry Pi Pico to facilitate OTA updates. This module will communicate with a central server to check for new firmware versions.
-
-### 2. Installing CircuitPython / MicroPython
-1. Download and install **CircuitPython** or **MicroPython** for Raspberry Pi Pico from the [official websites](https://circuitpython.org/board/raspberry_pi_pico/).
-2. Flash the firmware to the Pico using the drag-and-drop method.
-
-### 3. Flash the Firmware
-Clone the repository and flash the firmware to your Raspberry Pi Pico:
-
-```bash
-git clone https://github.com/yatryan/power-wheels-jeep.git
-cp -r power-wheels-jeep/* /Volumes/CIRCUITPY/
-```
-
-> Created by ChatGPT
+> README created by ChatGPT

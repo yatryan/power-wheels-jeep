@@ -22,7 +22,7 @@ led.value(True)
 # number of pixels
 n = 160
 # strip control gpio
-p = 10 # 5 
+p = 10 # GP10
 np = neopixel.NeoPixel(machine.Pin(p), n)
 
 # FUNCTIONS FOR LIGHTING EFFECTS

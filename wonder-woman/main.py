@@ -4,6 +4,7 @@ from machine import Pin
 import machine, neopixel, time
 from ota import OTAUpdater
 from WIFI_CONFIG import SSID, PASSWORD
+import _thread
 
 # OTA Update Link
 firmware_url = "https://raw.githubusercontent.com/yatryan/power-wheels-jeep/master/wonder-woman/"
@@ -50,14 +51,20 @@ def rainbow_cycle(wait):
     np.write()
     time.sleep_ms(wait)
 
+# Thread it up!
+def rainbow_cycle_thread():
+  while True:
+    rainbow_cycle(1)
+
 # turn off all pixels
 def clear():
   for i in range(n):
     np[i] = (0, 0, 0)
     np.write()
 
-while True:
-    rainbow_cycle(1)
+# Start Rainbow in second thread
+_thread.start_new_thread(rainbow_cycle_thread, ())
+
 #while True:
 #  if switch.value() == 0:
 #    clear()

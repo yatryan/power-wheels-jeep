@@ -63,7 +63,10 @@ def clear():
     np.write()
 
 # Start Rainbow in second thread
-_thread.start_new_thread(rainbow_cycle_thread, ())
+# _thread.start_new_thread(rainbow_cycle_thread, ())
+
+while True:
+    rainbow_cycle(1)
 
 #while True:
 #  if switch.value() == 0:

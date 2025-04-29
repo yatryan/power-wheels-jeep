@@ -56,15 +56,15 @@ def rainbow_cycle(wait):
 def rainbow_cycle_thread():
   while True:
     rainbow_cycle(1)
-
+    
 # turn off all pixels
 def clear():
   for i in range(n):
     np[i] = (0, 0, 0)
     np.write()
 
-_thread.start_new_thread(rainbow_cycle_thread, ())
-
+while True:
+    rainbow_cycle(1)
 #while True:
 #  if switch.value() == 0:
 #    clear()

@@ -21,7 +21,7 @@ led.value(True)
 
 # LED strip configuration
 # number of pixels
-n = 160
+n = 190
 # strip control gpio
 p = 10 # GP10
 np = neopixel.NeoPixel(machine.Pin(p), n)
